@@ -11,7 +11,7 @@
 #include "G4NeutronTrackingCut.hh"
 
 #include "G4DataQuestionaire.hh"
-#include "HadronPhysicsQGSC.hh"
+#include "SimG4Core/PhysicsLists/interface/HadronPhysicsQGSC.hh"
 
 QGSCCMS::QGSCCMS(G4LogicalVolumeToDDLogicalPartMap& map,
 		 const HepPDT::ParticleDataTable * table_,
@@ -47,7 +47,6 @@ QGSCCMS::QGSCCMS(G4LogicalVolumeToDDLogicalPartMap& map,
     // Hadron Physics
     G4bool quasiElastic=true;
     RegisterPhysics(  new HadronPhysicsQGSC("hadron",quasiElastic));
-    //RegisterPhysics(  new HadronPhysicsQGSC("hadron"));
 
     // Stopping Physics
     //RegisterPhysics( new G4QStoppingPhysics("stopping",ver));

@@ -11,7 +11,7 @@
 #include "G4NeutronTrackingCut.hh"
 
 #include "G4DataQuestionaire.hh"
-#include "HadronPhysicsFTFP.hh"
+#include "SimG4Core/PhysicsLists/interface/HadronPhysicsFTFP.hh" 
 
 FTFPCMS::FTFPCMS(G4LogicalVolumeToDDLogicalPartMap& map, 
 		 const HepPDT::ParticleDataTable * table_,
